@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SQL Command Lists</h1>
+    <p>
+        SELECT - is used to select data from a database. <br>
+        Syntax:<br>
+            SELECT column1, column2, ...<br>
+            FROM table_name;<br>
+        ------to select all data-------<br>
+            SELECT * FROM table_name;<br>
+
+            Ex:<br>
+                SELECT CustomerName, City FROM Customer;<br>
+                SELECT * FROM Customer;<br><br>
+
+        SELECT DISTINCT - used to select the different values(does not return a duplicate value);
+        Syntax: <br>
+            SELECT DISTINCT Country FROM Customers;<br>
+            SELECT COUNT(DISTINCT Country) FROM Customers;<br>
+
+            Note: This does not support Firefox, the code below Will work...<br>
+            SELECT Count(*) AS DistinctCountries<br>
+            FROM (SELECT DISTINCT Country FROM Customers);<br>
+        
+
+    </p>
+</body>
+</html>
