@@ -5,31 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        pre {font-family: Arial, Helvetica, sans-serif;
+            padding-bottom: 40px;
+        }
+
+    </style>
 </head>
 <body>
     <h1>SQL Command Lists</h1>
-    <p>
-        SELECT - is used to select data from a database. <br>
-        Syntax:<br>
-            SELECT column1, column2, ...<br>
-            FROM table_name;<br>
-        ------to select all data-------<br>
-            SELECT * FROM table_name;<br>
+    <pre>
+        SELECT - is used to select data from a database.
+        Syntax:
+            SELECT column1, column2, ..
+            FROM table_name;
+        ------to select all data-------
+            SELECT * FROM table_name;
 
-            Ex:<br>
-                SELECT CustomerName, City FROM Customer;<br>
-                SELECT * FROM Customer;<br><br>
+            Ex:
+                SELECT CustomerName, City FROM Customer;
+                SELECT * FROM Customer;
 
         SELECT DISTINCT - used to select the different values(does not return a duplicate value);
-        Syntax: <br>
-            SELECT DISTINCT Country FROM Customers;<br>
-            SELECT COUNT(DISTINCT Country) FROM Customers;<br>
+        Syntax:
+            SELECT DISTINCT Country FROM Customers;
+            SELECT COUNT(DISTINCT Country) FROM Customers;
 
-            Note: This does not support Firefox, the code below Will work...<br>
-            SELECT Count(*) AS DistinctCountries<br>
-            FROM (SELECT DISTINCT Country FROM Customers);<br>
-        
+            Note: This does not support Firefox, the code below Will work...
+            SELECT Count(*) AS DistinctCountries
+            FROM (SELECT DISTINCT Country FROM Customers);
+        WHERE - clause is used to filter records.Extract data depending on the condition.
+                - can you different operators:
+                    = > < >= <= <> BETWEEN LIKE IN
+        Syntax:
+            SELECT column1, comlumn2, ...
+            FROM table_name
+            WHERE condition;
 
-    </p>
+            TextFields vs. Numeric
+            WHERE CustomerID = 1; this is Numeric
+            WHERE Country = 'Mexico'; this is textfield
+            EX:
+                SELECT * FROM Customers
+                WHERE Country = 'Mexico';
+
+                This only display Mexico countries.
+
+        WHERE Claus can be combined with AND OR NOT
+            </pre>
 </body>
 </html>
