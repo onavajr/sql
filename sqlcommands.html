@@ -66,6 +66,36 @@
         Syntax: No need for column table if adding values for all columns.
             INSERT INTO table_name
             VALUES (value1, value2, value3, ...);
+        
+        SELECT TOP is used to specify the number of records to return.
+        --Note: Not all database systems support the SELECT TOP clause. MySQL supports the LIMIT clause to select a limited number of records, while Oracle uses FETCH FIRST n ROWS ONLY and ROWNUM.
+        Syntax: SQL Server/MS Access Syntax:
+            SELECT TOP number | percent column_name(s)
+            FROM table_name
+            WHERE condition;
+        Syntax: MySQL Syntax:
+            SELECT column_name(s)
+            FROM table_name
+            WHERE condition
+            LIMIT number;
+
+        MIN/MAX - this finds the lowest or highest value.
+            Syntax:
+            SELECT MAX(column_name)
+            FROM table_name
+            WHERE condition;
+            EX:
+                SELECT MIN(Price) AS SmallestPrice
+                FROM Products; 
+
+            Syntax:
+            SELECT MAX(column_name)
+            FROM table_name
+            WHERE condition;
+            EX:
+                SELECT MAX(Price) AS LargestPrice
+                FROM Products;
+
             </pre>
 </body>
 </html>
