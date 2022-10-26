@@ -96,6 +96,49 @@
                 SELECT MAX(Price) AS LargestPrice
                 FROM Products;
 
+        COUNT() returns the number of rows that matches a specified criterion.
+        Syntax:
+            SELECT COUNT(column_name)
+            FROM table_name
+            WHERE condition;
+
+        AVG() return the sum of numeric column
+        Syntax:
+            SELECT AVG(column_name)
+            FROM table_name
+            WHERE condition;
+
+        SUM() return the total sum of numeric column
+        Syntax:
+            SELECT SUM(column_name)
+            FROM table_name
+            WHERE condition;
+
+        
+        LIKE - used in a WHERE clause to search for a specified patterin in a column.
+        Syntax: Uses wilde cards symbol %(percent)and _ (underscore)
+            SELECT column1, column2, ... 
+            FROM table_name
+            WHERE columnN LIKE pattern;
+            EX:
+            WHERE CustomerName LIKE 'a%'	Finds any values that start with "a"
+            WHERE CustomerName LIKE '%a'	Finds any values that end with "a"
+            WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+            WHERE CustomerName LIKE '_r%'	Finds any values that have "r" in the second position
+            WHERE CustomerName LIKE 'a_%'	Finds any values that start with "a" and are at least 2 characters in length
+            WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+            WHERE ContactName LIKE 'a%o'	Finds any values that start with "a" and ends with "o"
+
+        IN operator - allows you to specity multiple values in a WHERE clause
+        IN is for multiple, OR is for condition.
+        Syntax:
+            SELECT column_name(s)
+            FROM table_name
+            WHERE column_name IN (value1, value2, ...);
+            or:
+            SELECT column_name(s)
+            FROM table_name
+            WHERE column_name IN/NOT IN (SELECT STATEMENT);
             </pre>
 </body>
 </html>
