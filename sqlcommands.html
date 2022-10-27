@@ -139,6 +139,16 @@
             SELECT column_name(s)
             FROM table_name
             WHERE column_name IN/NOT IN (SELECT STATEMENT);
+
+        BETWEEN - return the value within the given range. The values can be numbers, text, or dates.
+                - begin and end values are included.
+        Syntax:
+            SELECT column_name(s)
+            FROM table_name
+            WHERE column_name BETWEEN value1 AND value2;
+            EX:
+                SELECT * FROM Products
+                WHERE price BETWEEN 10 AND 20
             </pre>
 </body>
 </html>
