@@ -164,6 +164,15 @@
             SELECT CustomerID AS ID, CustomerName AS Customer
             FROM Customer;
 
+    INNER JOIN - used to combined two column from different table.
+    Syntax: 
+        SELECT table.column_name, 2ndtable.column_name, 3rdtable.column_name
+        FROM table
+        INNER JOIN table_name ON table_name.table_name=table_name.tablename;
+        ex:
+            SELECT Orders.OrderID, Cusotmers.CUsotmerName, Orders. OrderDate
+            FROM Orders
+            INNER JOIN Cusotmers ON Orders.CustomerID=Customers.CustomerID;
 
     ORlando Nava
 
