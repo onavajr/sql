@@ -205,7 +205,47 @@
         TO DISK = 'filepath'
         WITH DIFFERENTIAL;
 
-    Orlando
+    CREATE TABLE - used to create a new table in a database:
+    Syntax:
+        CREATE TABLE table_name (
+            column1 datatype,
+            column2 datatype,
+            column3 datatype,
+            ...
+        );
+
+    DROP TABLE - used to drop existing table in a database.
+    Syntax:
+        DROP TABLE table_name;
+
+    TRUNCATE TABLE - used to delete data in the table but not the table;
+    Syntax:
+        TRUNCATE TABLE table_name;
+
+    ALTER TABLE - used to delete, add, or modify columns in an existing table.
+    Syntax:
+        ALTER TABLE table_name;
+        ADD column_name datatype;
+
+        ex:
+            ALTER TABLE Customers
+            ADD Email varchar(255);
+        ex:
+            ALTER TABLE table_name
+            DROP COLUMN column_name;
+
+            ALTER TABLE Customers
+            DROP COLUMN Email;
+
+            ALTER TABLE table_name
+            ALTER COLUMN column_name datatype;
+
+            ALTER TABLE table_name
+            MODIFY COLUMN column_name datatype;
+
+        
+
+
             </pre>
 </body>
 </html>
