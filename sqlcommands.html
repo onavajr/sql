@@ -251,8 +251,25 @@
             FirstName varchar(255) NOT NULL,
             Age int
         );
+    mroe ex:
+        ALTER TABLE PersonsALTER COLUMN Age int NOT NULL;
 
+    UNIQUE - ensures that all values in the column are different
+    ex:
+        CREATE TABLE Persons (
+            ID int NOT NULL UNIQUE,
+            LastName varchar(255) NOT NULL,
+            FirstName varchar(255),
+            Age int
+        );
 
+    PRIMARY KEY - constraint uniquely identifies each record in a table.
+                - primary keys must contain UNIQUE values, and cannot contain NULL values.
+                - a table can only have one primary key; and in the table, this primary key can consist
+                of single or multiple column(fields).
+
+    FOREIGN KEY - constraint is used to prevent actions that would destroy links between tables.
+    
             </pre>
 </body>
 </html>
