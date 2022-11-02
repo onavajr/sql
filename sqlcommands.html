@@ -243,7 +243,14 @@
             ALTER TABLE table_name
             MODIFY COLUMN column_name datatype;
 
-        
+    NOT NULL - constraint enforces a column to NOT accept NULL values
+    ex:
+        CREATE TABLE Persons (
+            ID int NOT NULL,
+            LastName varchar(255) NOT NULL,
+            FirstName varchar(255) NOT NULL,
+            Age int
+        );
 
 
             </pre>
