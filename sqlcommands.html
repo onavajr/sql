@@ -269,7 +269,26 @@
                 of single or multiple column(fields).
 
     FOREIGN KEY - constraint is used to prevent actions that would destroy links between tables.
+    FOREIGN KEY on CREATE TABLE
+    ex:
+        CREATE TABLE (
+            OrderID int NOT NULL,
+            OrderNumber int NOT NULL,
+            PersonID int,
+            PRIMARY KEY (OrderID),
+            FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+        );
     
+    
+        CHECK - constraint used to limit the value range that can be placed in column
+        ex:
+            CREATE TABLE Persons(
+                ID int NOT NULL,
+                LastName varchar(255) NOT NULL,
+                FirstName varchar(255),
+                Age int,
+                CHCEK(Age>=18)
+            );
             </pre>
 </body>
 </html>
