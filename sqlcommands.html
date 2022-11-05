@@ -289,6 +289,24 @@
                 Age int,
                 CHCEK(Age>=18)
             );
+
+        DEFAULT - used to set a default value for a column.
+                - a default value will be added if no other value is specified.
+
+        ex:
+            CREATE TABLE (
+                ID int NOT NULL,
+                LastName varchar(255) NOT NULL,
+                FirstName varchar(255),
+                Age int,
+                City varchar(255) DEFAULT 'sandnes'
+            );
+        ex 2:
+            CREATE TABLE Orders (
+                ID int NOT NULL,
+                OrderNumber int NOT NULL,
+                OrderDate DEFAULT GETDATE()
+            );
             </pre>
 </body>
 </html>
