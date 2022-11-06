@@ -307,6 +307,40 @@
                 OrderNumber int NOT NULL,
                 OrderDate DEFAULT GETDATE()
             );
+
+        CREATE INDEX - used to create indexes in tables.
+        Indexes - used to retrieve data from the database more quickly than otherwise.
+        syntax:
+            CREATE INDEX index_name
+            ON table_name(column1, column2, ...);
+
+        CREATE UNIQUE INDEX - create unique index. Duplicate value are not allowed:
+        syntax:
+            CREATE UNIQUE INDEX index_name
+            ON table_name (column1, column2, ...);
+
+        ex:
+            CREATE INDEX idx_lastname
+            ON Persons(LastName);
+
+        ex:
+            CREATE INDEX idx_pname
+            ON Persons (LastName, FirstName);
+
+        DROP INDEX - used to delete an index in a table.
+        ex:
+            DROP INDEX index_name ON table_name;
+
+        AUTO INCREMENT - allows a unique number to be generated automatically when a new record is 
+            inserted into a table.
+
+        CREATE TABLE Persons (
+            Personid int NOT NULL AUTO_INCREMENT,
+            LastName varchar(255) NOT NULL,
+            FirstName varchar(255) NOT NULL,
+            Age int,
+            PRIMARY KEY (Personid)
+        );
             </pre>
 </body>
 </html>
