@@ -341,6 +341,35 @@
             Age int,
             PRIMARY KEY (Personid)
         );
+
+        
+        CREATE VIEW - is a virtual table based on the result-set of an SQL statement.
+                    - it contain rows and column like a real table. The fields in a view are
+                        fields from one or more real tables in the table.
+
+        Syntax:
+            CREATE VIEW view_name AS
+            SELECT column1, column2, .... 
+            FROM table_name 
+            WHERE condition;
+
+
+            ex:
+
+                CREATE VIEW [Brazil Customers] AS 
+                SELECT CustomerName, ContactName
+                FROM Customers
+                WHERE Country = 'Brazil';
+
+            another ex: this creates a view that selects every product in the "Products" table with a price higher than
+            the average price:
+                CREATE VIEW [Products Aboce Average Price] AS 
+                SELECT ProductName, Price
+                FROM Products
+                WHERE PRice > (SELECT AVG(Price) FROM Products);
+
+                query the view above as follows:
+                SELECT * FROM [Products Above Average];
             </pre>
 </body>
 </html>
